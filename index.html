@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Filip Stojanovic</title>
+  <meta
+    name="description"
+    content="Academic website of Filip Stojanovic, a PhD candidate in operations research working in probability theory."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --text: rgb(42, 50, 65);
+      --link: #0870a9;
+      --link-hover: #4ca8d8;
+      --paper: #5d8f07;
+      --rule: #eeeeee;
+      --muted: #666666;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #ffffff;
+      color: var(--text);
+      font-family: "Noto Sans", Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.6;
+      max-width: 1000px;
+      width: calc(100% - 40px);
+      margin: 35px auto 70px;
+    }
+
+    h1, h2, h3 {
+      font-weight: 400;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 0.4rem;
+    }
+
+    h2 {
+      border-bottom: 2px solid var(--rule);
+      font-size: 1.45rem;
+      margin-top: 2.2rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.2rem;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.35rem;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+      background-image: linear-gradient(to right, var(--link) 25%, rgba(255,255,255,0) 0%);
+      background-position: bottom;
+      background-size: 3px 1px;
+      background-repeat: repeat-x;
+    }
+
+    a:hover {
+      color: var(--link-hover);
+    }
+
+    a.paper-title {
+      color: var(--paper);
+      background-image: none;
+      font-weight: 600;
+    }
+
+    nav {
+      text-align: center;
+      padding: 0.35rem 0;
+    }
+
+    nav a {
+      display: inline-block;
+      margin: 0.35rem 0.65rem;
+      font-weight: 600;
+    }
+
+    hr {
+      border: 0;
+      border-top: 1px solid #cccccc;
+      margin: 0.8rem 0;
+    }
+
+    .intro {
+      display: flow-root;
+      margin-top: 1.5rem;
+    }
+
+    .profile-photo {
+      float: right;
+      width: 480px;
+      max-width: 50%;
+      margin: 0 0 1rem 2.25rem;
+      border-radius: 2px;
+    }
+
+    .contact-table {
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+
+    .contact-table td {
+      padding: 0.15rem 0.5rem 0.15rem 0;
+      vertical-align: top;
+    }
+
+    .contact-table td:first-child {
+      font-weight: 700;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .publication,
+    .talk-item {
+      margin-bottom: 1.2rem;
+    }
+
+    .publication p,
+    .talk-item p {
+      margin: 0.2rem 0;
+    }
+
+    .details {
+      margin: 0.25rem 0 0.25rem 1.8rem;
+      color: var(--muted);
+    }
+
+    .section-note {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--rule);
+      color: var(--muted);
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    @media (max-width: 700px) {
+      body {
+        width: calc(100% - 28px);
+        margin-top: 20px;
+        font-size: 16px;
+      }
+
+      .profile-photo {
+        float: none;
+        display: block;
+        max-width: 600px;
+        width: 100%;
+        margin: 1rem auto 1.5rem;
+      }
+
+      .contact-table td:first-child {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Filip Stojanovic</h1>
+    <hr />
+
+    <nav aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#talks">Talks</a>
+      <a href="#teaching">Teaching &amp; Service</a>
+      <!--<
+      a href="files/cv.pdf">CV</a>
+      <a href="files/research_statement.pdf">Research Statement</a>
+       -->
+      <!-- Replace # with your Google Scholar URL when you have it. 
+      <a href="#">Google Scholar</a>
+      -->
+    </nav>
+
+    <hr />
+  </header>
+
+  <main>
+    <section id="home" class="intro">
+      <!--
+        Put your headshot at images/photo.jpg.
+        If you do not want a photo, delete the next <img> element.
+      -->
+      <img
+        class="profile-photo"
+        src="photo.JPG"
+        alt="Portrait of Filip Stojanovic"
+        onerror="this.style.display='none'"
+      />
+
+      <p>
+        I am a Ph.D. candidate in the department of Operations Research and Information 
+        Engineering at Cornell University, where I am fortunate to be advised by Prof.
+        Gennady Samorodnitsky.
+      </p>
+      
+      <p>
+        I work in probability theory, and I am particularly interested in understanding 
+        under what conditions a random system exhibits "typical" versus "atypical" behaviour. 
+        In much of my current work, this takes the form of characterizing when heavy-tailed
+        stochastic processes exhibit long-range dependence, but I also have work on 
+        characterizing self-similarity (and related symmetries) in stochastic processes (and beyond!).
+      </p>
+        
+    
+      <!--
+      <p>
+        My current work studies how dependence and heavy tails interact in the asymptotic
+        behavior of nonlinear functionals of stationary stochastic processes. In particular,
+        I am interested in functional limit theorems, phase transitions, and the role of
+        ergodic-theoretic structure in stationary stable processes.
+      </p>
+      -->
+      
+
+      <!-- Edit these contact details. -->
+      <table class="contact-table" aria-label="Contact information">
+        <tbody>
+          <tr>
+            <td>Email</td>
+            <td>fs452@cornell.edu</td>
+          </tr>
+          <tr>
+            <td>Affiliation</td>
+            <td>Department of Operations Research & Information Engineering, Cornell University</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+
+    <section id="research">
+      <h2>Research</h2>
+
+      <p></p>
+        My current work is concerned with understanding how long-range dependence manifests 
+        in heavy-tailed stochastic processes. Heavy tails appear in systems where extreme 
+        values occur relatively frequently and long-range dependence appears in systems where 
+        memory persists for a long time. Classical approaches for detecting long-range dependence 
+        are usually based on covariances, but these are often unavailable for heavy-tailed 
+        processes since their marginals may not have finite second moments. My work focuses
+        instead on identifying phase transitions in the asymptotic behaviour of functionals of 
+        these processes that can be understood as a sign of long-range dependence. 
+      </p>
+
+    
+
+  
+     
+    </section>
+
+    <section id="publications">
+      <h2>Publications and Preprints</h2>
+
+      <!-- Duplicate this block for each paper. -->
+      <div class="publication">
+        <p>
+          <a class="paper-title" href="#">
+            Limit Theory of <em>ℓ<sup>p</sup></em> Norms of Stable Processes Driven by Dissipative Flows
+          </a>
+        </p>
+        <p>Filip Stojanovic, Gennady Samorodnitsky.</p>
+        <ul class="details">
+          <li>Manuscript in preparation. 
+            (<a href="mailto:fs452@cornell.edu">draft available upon request</a>).
+          </li>
+        </ul>
+      </div>
+
+
+      <div class="publication">
+        <p>
+          <a class="paper-title" href="#">Limit Theory of Large-p <em>ℓ<sup>p</sup></em> Norms of Stable 
+            Processes Driven by Conservative Flows</a>
+        </p>
+        <p>Filip Stojanovic, Gennady Samorodnitsky.</p>
+        <ul class="details">
+          <li>Manuscript in preparation.
+            <!--(<a href="mailto:fs452@cornell.edu">draft available upon request</a>).-->
+          </li>
+        </ul>
+      </div>
+
+      <div class="publication">
+        <p>
+          <a class="paper-title" href="#">
+            Another Perspective for Lie Symmetries With a View Towards Scaling Limits
+          </a>
+        </p>
+        <p>Filip Stojanovic, Pierre Patie.</p>
+        <ul class="details">
+          <li>
+            Manuscript in preparation.
+        </ul>
+      </div>
+
+
+      <!--
+        Add more publication blocks above this comment.
+        Delete the placeholder entries once you replace them with your actual papers.
+      -->
+    </section>
+
+    <section id="talks">
+      <h2>Invited Talks</h2>
+
+      <div class="talk-item">
+        <p><strong>The <em>ℓ<sup>p</sup></em> Norms of Stationary Stable Processes</strong></p>
+        <ul>
+          <li>Cornell Probability Seminar, October 2026.</li>
+          <li>Banff International Research Station, August 2026.</li>
+        </ul>
+      </div>
+
+      <div class="talk-item">
+        <p><strong>Another Perspective for Lie Symmetries With a View Towards Scaling Limits </strong></p>
+        <ul>
+          <li>IMS, National University of Singapore, August 2024.</li>
+        </ul>
+      </div>
+    </section>
+
+
+
+    <section id="teaching">
+      <h2>Teaching and Service</h2>
+
+      <h3>Teaching</h3>
+      <ul>
+        <li>Cornell University — ORIE 3500 (Engineering Probability & Statistics II), TA, Fall 2026.</li>
+        <li>Cornell University — ORIE 5610 (Financial Engineering w/ Stochastic Calculus II), TA, Spring 2023,24,26.</li>
+        <li>Cornell University — ORIE 5630 (Operations Research Tools for Financial Engineering), TA, Fall 2025.</li>
+        <li>Cornell University — ORIE 5650 (Quantitative Methods of Financial Risk Management), TA, Spring 2025.</li>
+      </ul>
+
+
+    </section>
+  </main>
+
+  <footer>
+    Last updated October 2026.
+  </footer>
+</body>
+</html>
